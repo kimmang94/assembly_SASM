@@ -4,27 +4,25 @@ section .text
 global CMAIN
 CMAIN:
     mov rbp, rsp; for correct debugging
-    ;write your code here
+     
+    ; 8bit = 1byte
+    ; 16bit = 2byte = 1word
+    ; 32bit = 4byte = 2word = 1dword (double word)
+    ; 64bit = 8byte = 4word = 1qword (quad word)
     
-    ; 메모를 남길 수 있는 기능 = 주석
-    
-    ; 10진수 (0 1 2 3 4 5 6 7 8 9)
-    ; 9 10 11 12 ... 19
-    ; 20 21 ...
-    
-    ; 2진수0b (0 1)
-    ; 0 1
-    ; 10 11
-    ; 0b0 0b1 0b10
+    ; mov reg1, cst
+    ; mov reg1, reg2
     
     
-    ; 16진수 0x (0 1 2 3 4 5 6 7 8 9 A B C D E F)
-    ; 0 1 2 3 4 5... F 10
+    mov eax, 0x1234
+    mov rbx, 0x12345678
+    mov cl, 0xff
     
+    mov al, 0x00
+    mov rax, rdx
     
-    PRINT_STRING msg
-    xor eax, eax
+    xor rax, rax
     ret
     
-section .data
-    msg db 'HelloWorld', 0x00
+;section .data
+  
