@@ -1,12 +1,12 @@
+%include "io64.inc"
+
 section .text
-global main
-main:
-    mov rbp, rsp; for correct debugging
+global CMAIN
+CMAIN:
     ;write your code here
     PRINT_STRING msg
-    
-    xor rax, rax
+    xor eax, eax
     ret
     
 section .data
-    msg db 'Hello World', 0x00
+    msg db 'HelloWorld', 0x00
